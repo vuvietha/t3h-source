@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo HTML Form</title>
+</head>
+<body>
+	<!-- The html form-->
+	<!--Gui du lieu tu client len server-->
+	<!-- thuoc tinh action chi ra duong dan gui du lieu len server-->
+	<!--method phuong thuc gui du lieu len server GET/POST/PUT/PATCH/DELETE..-->
+	<!-- enctype Cho phep nguoi dung gui dinh kem 1 file len server.(multipart/form-data) Khi su dung thuoc tinh enctype thi method bat buoc la POST-->
+	<form action="" method="" enctype="">
+
+		<!--Tao ra nhan dai dien cho the input nao do-->
+		<label for="txtUser">Username: </label>
+
+		<!-- cho nguoi dung nhap du lieu tren 1 dong-->
+		<!--Server muon nhan du lieu tu form gui len thi phai can cu vao thuoc tinh name cua the input-->
+		<!--Value: gan gia tri mac dinh-->
+		<!--Placeholder: goi y cho nguoi dung nhap gia tri-->
+		<!--required: bat buoc nguoi dung phai nhap-->
+		<!--readonly server van nhan dc du lieu disabled server ko nhan dc du lieu  tu the input-->
+		<!--<input type=text id="txtUser" name="" value="Ha" placeholder="Moi nhap username" minlength=3 maxlength="60" required="required" readonly="readonly" disabled="disabled">-->
+
+		<input type=text id="txtUser" name="" value="Ha" placeholder="Moi nhap username" minlength="3" maxlength="60" required="required">
+		<br>
+		<label for="txtEmail">Email</label>
+		<input type ="email" name = "txtEmail" value="">
+		<br>
+		<label for="txtURL">URL</label>
+		<!--URL hop le la bao gom giao thuc http or https va ten mien: https://dantri.com.vn-->
+		<input type ="url" name = "txtURL" value="">
+		<br>
+		<br>
+
+		<label for="txtNumber">Number</label>
+		<input type ="number" name = "txtNumber" value="">
+		<br>
+		<br>
+		<label  for="txtDate">Date</label>
+		<input type="Date" name="txtDate">
+		<br>
+		<br>
+		<label  for="txtMonth">Month</label>
+		<input type="Month" name="txtMonth">
+		<br>
+		<br>
+		<label  for="txtWeek">Week</label>
+		<input type="Week" name="txtWeek">
+		<br>
+		<br>
+		<label  for="txtColor">Color</label>
+		<input type="Color" name="txtColor">
+		<br>
+		<lable for="Birthday">Birthday</lable>
+		<select id="Birthday" name="Birthday">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4" selected="selected">4</option>
+			<option value="5">5</option>
+		</select>
+		<br>
+		<!-- Cung nhom radio thi gia tri thuoc tinh name giong nhau -->
+		<label for="nam">Nam</label>
+		<input type="radio" id="nam" name="gender" value="0" checked="checked">
+
+		<label for="nu">Nu</label>
+		<input type="radio" id="nu" name="gender" value="1">
+		<br>
+		<label for="ckAgree">Agree</label>
+		<input type="checkbox" name="ckAgree" checked="checked">
+		<br>
+		<label for="btnButton">Button</label>
+		<button type="button" name="btnButton">Click me</button>
+		<br>
+		<label for="btnSubmit">Submit</label>
+		<button type="submit" name="btnSubmit">Submit</button>
+		<br>
+		<label for="btnReset">Reset</label>
+		<button type="reset" name="btnReset">Reset</button>
+		<br>
+		<label for="txtNote">Note</label>
+		<textarea name="txtNote" id="" cols="50" rows="10"></textarea>
+		<br>
+	</form>
+	<!--end html form-->
+</body>
+</html>

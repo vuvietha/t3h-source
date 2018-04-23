@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Facebook login page</title>
+	<link rel="stylesheet" href="css/facebook.css">
+	<link rel="icon" href="images/fb_icon.png">
+</head>
+<body>
+	<!--header-->
+	<header>
+		<div class="container">
+			<div class="logo">
+				<a href=""></a>
+			</div>
+			<div class="login">
+				<form action="">
+					<div class="username">
+						<label for="username">Email or Phone</label>
+						<input type="text" name="username">
+					</div>
+					<div class="password">
+						<label for="password">Password</label>
+						<input type="password" name="password">
+						<a href="">Forgotten account?</a>
+					</div>
+					<div class="submit">
+						<button type="submit" name="btnLogin" id="btnLogin">Log In</button>
+					</div>
+					
+					
+				</form>
+			</div>
+		</div>
+	</header>
+	<!-- end header-->
+
+	<!--main-->
+	<main>
+		<div class="content">
+			<div>
+				<section class="picture">
+					<h1>Recent logins</h1>
+					<p  class="title">Click your picture or add an account</p>
+					<div class="account">
+						<a href=""><img src="images/avatar.jpg" alt=""></a>
+						<div class="oldAccount">Hà</div>
+						<a href=""><button id="btnRemoveAccount"></button></a>
+					</div>
+					<div class="addAccount">
+						<div class="addAccountBackground">
+							<div class="addAccountIcon"></div>
+						</div>
+						<div class="btnAddAccount">Add Account</div>
+					</div>
+					
+				</section>
+				<section class="register">
+					<h1>Create a new account</h1>
+					<p class="title">It's free and always will be.</p>
+					<form action="">
+						<input type="text" name="firstname" placeholder="First name" required="require">
+						<input type="text" name="surname" placeholder="Surname" required="require">
+						<input type="text" name="username" placeholder="Mobile number or email address" required="require">
+						<input type="password" name="password" placeholder="New password" required="require" minlength="6">
+						<div class="birthdayDiv">
+							<div class="birthdayLabel">Birthday</div>
+							<div class="birthdayInput">
+
+								<select name="txtDate" id="txtDate">
+									<option value="0">Day</option>
+									<option value="1">1</option>
+									<option value="2" selected="1">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+								</select>
+								<select name="txtMonth" id="txtMonth">
+									<option value="0">Month</option>
+									<option value="1">Jan</option>
+									<option value="2">Feb</option>
+									<option value="3">Mar</option>
+									<option value="4" selected="1">Apr</option>
+									<option value="5">May</option>
+									<option value="6">Jun</option>
+									<option value="7">Jul</option>
+									<option value="8">Aug</option>
+									<option value="9">Sept</option>
+									<option value="10">Oct</option>
+									<option value="11">Nov</option>
+									<option value="12">Dec</option>
+								</select>
+								<select name="txtYear" id="txtYear">
+									<option value="0">Year</option>
+									<option value="2018">2018</option>
+									<option value="2017" selected="selected">2017</option>
+									<option value="2016">2016</option>
+									<option value="2015">2015</option>
+									<option value="2014">2014</option>
+									<option value="2013">2013</option>
+								</select>
+							</div>
+							<div class="moreInformation">
+								<a href="" class="blueLink">Why do I need to provide my date of birth?</a>
+
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="gender">
+							<input type="radio" id="female" name="gender" value="female">
+							<label for="female">Female</label>
+
+							<input type="radio" id="male" name="gender" value="male">
+							<label for="male">Male</label>
+
+						</div>			
+						<p class="policy">By clicking Create Account, you agree to our <a href="#" class="blueLink">Terms</a> and confirm that you have read our <a href="#" class="blueLink">Data Policy</a>, including our <a href="#" class="blueLink">Cookie Use Policy</a>. You may receive SMS message notifications from Facebook and can opt out at any time</p>
+						<button type="submit" name="btnRegister" id="btnRegister"> Create Account</button>
+					</form>
+					<p class="createPage"><a href="#">Create a Page</a> for a celebrity, band or business.</p>
+
+
+				</section>
+			</div>
+
+		</div>
+	</main>
+	<!--end main-->
+	<!--footer-->
+	<footer>
+		<div class="container">
+			<ul class="list1 linkList">
+				<li><a href="#" class="activeLangauge">English (UK)</a></li>	
+				<li><a href="#" >Tiếng Việt</a></li>
+				<li><a href="#" >中文(台灣)</a></li>
+				<li><a href="#" ">한국어</a></li>
+				<li><a href="">日本語</a></li>
+				<li><a href="">Français (France)</a></li>
+				<li><a href="">ภาษาไทย</a></li>
+				<li><a href="">Español</a></li>
+				<li><a href="">Português (Brasil)</a></li>
+				<li><a href="">Deutsch</a></li>
+				<li><a href="">Italiano</a></li>
+				<li class="otherLanguage"><a href="" ></a></li>		
+			</ul>
+			<ul class="list2 linkList ">
+				<li><a href="#" class="languageLink">Sign Up</a></li>
+				<li><a href="#">Log In</a></li>
+				<li><a href="#">Messenger</a></li>
+				<li><a href="#">Facebook Lite</a></li>
+				<li><a href="#">Mobile</a></li>
+				<li><a href="#">Find Friends</a></li>
+				<li><a href="#">People</a></li>
+				<li><a href="#">Pages</a></li>
+				<li><a href="#">Places</a></li>
+				<li><a href="#">Games</a></li>
+				<li><a href="#">Locations</a></li>
+				<li><a href="#">Celebrities</a></li>
+				<li><a href="#">Marketplace</a></li>
+				<li><a href="#">Groups</a></li>
+				<li><a href="#">Recipes</a></li>
+				<li><a href="#">Sports</a></li>
+				<li><a href="#">Look</a></li>
+				<li><a href="#">Moments</a></li>
+				<li><a href="#">Instagram</a></li>
+				<li><a href="#">Local</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Create ad</a></li>
+				<li><a href="#">Create Page</a></li>
+				<li><a href="#">Developers</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Cookies</a></li>
+				<li class="AdChoices">
+					<a href="#">AdChoices</a>
+					<span></span>
+				</li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Help</a></li>	
+			</ul>
+			<div class="copyright">
+				Facebook © 2018
+
+			</div>
+		</div>
+
+	</footer>
+	<!--end footer-->
+
+</body>
+</html>

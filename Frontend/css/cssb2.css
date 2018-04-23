@@ -1,0 +1,141 @@
+/*div.container :first-child {
+	color: red;
+}
+div.container :first-of-type {
+	color: blue;
+	
+}
+div.container p:first-child{
+	color: green;
+}
+
+div.container :last-child{
+	color: yellow;
+}
+
+div.container :last-of-type{
+	color:pink;
+}
+
+div.container :nth-last-child(3){
+	color: violet;
+}
+
+div.container:nth-last-of-type(3){
+	color:red;
+}*/
+
+div.container :nth-child(3){
+	color:blue;
+}
+
+div.container :nth-of-type(3){
+	color:red;
+}
+
+div.box h1:only-child{
+	font-size: 20px;
+	font-weight: normal;
+}
+
+div.box-2 > input[type="text"]:focus{
+	width: 500px;
+	height: 100px;
+}
+
+div.box-2 > input[name="txtUsername"]:hover{
+	width: 500px;
+	height: 100px;
+}
+div.box-2 > input[type="checkbox"]:checked{
+	width: 300px;
+	border: 2px solid red;
+	height: 100px;
+
+
+}
+
+div.box-2 > input[type="radio"]:checked{
+	width: 300px;
+	border: 2px solid red;
+	height: 100px;
+
+
+}
+
+ul li a:link{
+	color: red;
+	font-size: 20px;
+}
+
+ul li a:active{
+	color: black;
+	font-size: 20px;
+}
+
+ul li a:visited{
+	color: violet;
+	font-size: 20px;
+}
+
+ul li a:hover{
+	color: green;
+	text-decoration: none;
+}
+
+div.box-3 p::first-letter{
+	color: red;
+	font-size: 50px;
+}
+
+div.box-3 p::first-line{
+	color: green;
+	
+}
+
+div.box-3 p::after{
+	/*content: 'Hello';*/
+	content: url('../image/icon_zing_mp3_60.png')
+}
+
+div.box-3 p::before{
+	/*content: 'Hello';*/
+	content: url('../image/icon_zing_mp3_60.png')
+}
+
+div.box-3 p::selection{
+	color: yellow;
+	background: blue;
+
+}
+div.box-3 h2{
+	/*font-style: oblique;*/
+	text-shadow: pink 10px 10px 1px;
+}
+div.box-4 {
+	width: 500px;
+	height: 500px;
+	/*border: 1px solid red;
+	/*background-color: #ccc;
+	/*background-image: url('../image/icon_zing_mp3_60.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 300px 100px;*/
+	/*background: #ccc url('../image/icon_zing_mp3_60.png') no-repeat center center;
+	background-attachment: scroll;
+	background-clip: border-box;
+	/*padding-top: 20px;
+	padding-left: 40px;*/
+}
+
+div.box-3{
+	width: 300px;
+	height: 300px;
+	border: 1px solid blue;
+	margin-bottom: 10px;
+}
+
+div.box-4 > p{
+	margin-top: 200px;
+
+}

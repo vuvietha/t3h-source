@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo JS - DOM</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		.nameClass{
+			color: red;
+		}
+		div.content{
+			width: 300px;
+			height: 300px;
+			background-color: pink;
+			border: 1px solid red;
+		}
+		
+	</style>
+</head>
+<body>
+	<button type="button" id="btnClick">Click me</button>
+	<button class="myBtn" type="button" id="btnClick2">Click me 2</button>
+	<button class="myBtn" type="button" id="btnRefresh">Load page</button>
+	<h2 class="nameClass">This is class PHP sd</h2>
+	<input type="text" id="username">
+	<br>
+	<img src="image/icon_zing_mp3_60.png" alt="">
+	<br>
+	<div class="content">
+		<h4>This is box content</h4>
+	</div>
+	<br>
+	<a href="js8.html" title="Sang trang khac">go to js8.html</a>
+	<script type="text/javascript">
+		//hoc ve dom element - cach truy xuat vao 1 phan tu html  bang js
+		//truy xuat vao the do thong qua thuoc tinh id cua no
+		let btn = document.getElementById('btnClick');
+		console.log(btn);
+		let btn2 = document.getElementsByTagName('button');
+		console.log(btn2[1]);
+		let btn3 = document.getElementsByClassName('myBtn');
+		console.log(btn3[0]);
+		let title = document.querySelectorAll('.nameClass');	
+		console.log(title[0]);
+
+		//dom events
+		btn.onclick = function(){
+			//alert('Hello');
+			let content = document.querySelectorAll('.nameClass');
+			let mess = content[0].innerHTML;
+			//alert(mess);
+			document.getElementsByClassName('content')[0].style.backgroundColor = 'yellow';
+			document.getElementsByClassName('content')[0].style.border = '1px solid green';
+
+			let wBr = window.innerWidth;
+			console.log(wBr);
+			let hBr = window.innerHeight;
+			//alert(`Chieu rong ${wBr} - Chieu cao ${hBr}`);
+			window.open('https://vnexpress.net/','vnexpress','height:100,width:100,titlebar:0,scrollbars:0');
+		}
+		btn2[1].addEventListener('click',function(){
+			//alert('Hi you');
+			document.querySelectorAll('.nameClass')[0].innerHTML ='This is class PHP';
+			let user = document.getElementById('username').value;
+			//console.log(user);
+			//document.getElementById('username').setAttribute('type','button');
+			document.getElementById('username').type = 'button';
+			document.getElementById('username').innerHTML = 'button';
+			document.getElementsByTagName('img')[0].src = "image/1.jpg";
+		});
+		let refresh = document.getElementById('btnRefresh');
+		refresh.addEventListener('click', function(){
+			//window.location.reload(true);
+			//window.location.href = 'https://vnexpress.net';
+			let sw = screen.width;
+			let sh = screen.height;
+			//alert(`Chieu rong ${sw} - Chieu cao ${sh}`);
+			history.forward();
+		})
+	</script>
+</body>
+</html>

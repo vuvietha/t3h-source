@@ -1,0 +1,63 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+nav{
+	width: 180px;
+	border: 1px solid #ccc;
+	min-height: 200px;
+	background-color: pink;
+}
+
+nav ul li{
+	list-style: none;
+	padding: 10px 0px 10px 8px;
+	border-bottom: 1px solid red;
+	position: relative;
+}
+
+nav ul li a{
+	text-decoration: none;
+}
+
+nav ul li:last-child{
+	border: none;
+}
+
+nav ul li:hover{
+	background-color: black;
+	cursor: pointer;
+}
+
+nav ul li:hover a{
+	color: white;
+	text-decoration: underline;
+
+}
+
+/*Dropdown menu css*/
+
+nav ul.dropdown{
+	display: none;
+	position: absolute;
+	background-color: pink;
+	width: 180px;
+	left: 180px;
+	top: 0px;
+}
+
+nav ul li:hover ul.dropdown{
+	display: block;
+}
+
+
+
+nav ul li:hover ul.dropdown li > ul.dropdown{
+	display: none;
+}
+
+nav ul li ul.dropdown li:hover > ul.dropdown{
+	display: block;
+}

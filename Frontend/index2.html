@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Khai báo tiêu đề hiển thị trên tabar của trình duyệt-->
+	<title>mp3.zing.vn</title>
+
+	<!--SEO web-->
+	<meta name="author" content="Vu Ha">
+	<meta name="description" content="website nghe nhac truc tuyen">
+	<meta name ="keyword" content="mp3, mp4">
+
+	<!--Hỗ trợ font chữ ký tự đặc biệt-->
+	<meta charset="utf8">
+	<link rel="icon" href="image/icon_zing_mp3_60.png">
+
+	<!--Nhúng css ngoại tuyến vào website-->
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+	
+	<!--Định nghĩa css nội tuyến-->
+	<style type="text/css">
+		/* code css ở đây*/
+		/*reset trinh duyet*/
+		*{
+			margin:0;
+			padding:0;
+			border:0;
+		}
+		/* css header*/
+		header{
+			width: 100%;
+			min-height: 120px;
+			background: blue;
+		}
+		div.container{
+			width: 980px;
+			margin: auto;
+		}
+		div.container div.logo{
+			width: 300px;
+			height: 120px;
+			float: left;
+			background: green;
+		}
+		div.container div.sologan{
+			width: 680px;
+			height: 120px;
+			float: left;
+			background: pink;
+		}
+		h2{
+			text-align: center;
+			padding-top: 20px;
+		}
+		nav{
+			width: 100%;
+			min-height: 80px;
+			background: black;
+		}
+		ul{
+			text-align: center;
+			padding-top: 30px;
+
+		}
+		ul li{
+			list-style: none;
+			display: inline;
+			padding: 10px 20px;
+		}
+		ul li a{
+			text-decoration: none;
+			color:white;
+			line-height: 14px;
+		}
+
+		/*end css header*/
+
+		/* css main*/
+		main{
+			width: 100%;
+			min-height: 800px;
+			background: #ccc;
+		}
+		section#content{
+			width: 100%;
+			height: 700px;
+			background: yellow;
+
+		}
+		section#box{
+			width: 680px;
+			height: 700px;
+			float: left;
+			background: red;
+		}
+		aside{
+			width: 300px;
+			height: 700px;
+			float: left;
+			background: yellow;
+		}
+		div.content-box-1{
+			width: 100%;
+			height: 50%;
+			background: gray;
+		}
+		div.content-box-2{
+			width: 100%;
+			height: 50%;
+			background: red;
+		}
+		article {
+			width: 100%;
+			height: 100px;
+			background: violet;
+
+		}
+		/*end css main*/
+
+		footer{
+			width: 100%;
+			height: 200px;
+			background: black;
+		}
+		footer h2{
+			color:white;
+		}
+	</style>
+	<!--Nhúng javascript ngoại tuyến vào webstie-->
+	<script src="js/test.js" type="text/javascript"></script>
+
+	<!-- sử dụng js nội tuyến-->
+	<script  type="text/javascript">
+		/* code js ở đây*/
+	</script>
+	<noscript>Báo cho người dùng biết trình duyệt của bạn có hỗ trợ javascript
+	</noscript>
+</head>
+<body>
+	<!-- html layout-->
+	<!--header-->
+	<header>
+		<!-- the div tao 1 vung khong gian lam viec-->
+		<div class="container">
+			<div class="logo">
+				<h2>This is logo</h2>
+				
+			</div>
+			<div class="sologan">
+				<h2>This is sologan</h2>
+			</div>
+			
+		</div>
+	</header>
+	<!--./header-->
+
+	<!--nav-->
+	<!--tao menu thanh dieu huong trang-->
+	<nav>
+		<div class="container">
+			<ul class="menu">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">About</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+				<li>
+					<a href="#">Product</a>
+				</li>
+			</ul>
+			
+		</div>
+		
+	</nav>
+	<!--./nav-->
+
+	<!--main-->
+	<main>
+		<div class="container">
+
+			<!-- Tao ra mot vung chon noi dung co lien quan den nhau-->
+			<section id ="content">
+				<section id="box">
+					<div class="content-box-1">
+						<h2>This is content-box-1</h2>
+						
+					</div>
+					<div class="content-box-2">
+						<h2>This is content-box-2</h2>
+					</div>
+				</section>
+				<!-- aside tao 1 thanh nam ben trai-->
+				<aside>
+					<h2>This is aside</h2>
+				</aside>
+				
+			</section>
+
+			<!-- article vung noi dung doc lap-->
+			<article>
+				<h2>This is article</h2>
+			</article>
+		</div>
+		
+	</main>
+	<!--./main-->
+
+	<!--footer-->
+	<footer>
+		<div class="container">
+			<h2>This is footer</h2>
+			
+		</div>
+	</footer>
+	<!--./footer-->
+</body>
+</html>

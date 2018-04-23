@@ -1,0 +1,518 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*Start css header*/
+header{
+	width: 100%;
+	height: 800px;
+	background: url('../images/header-background.jpg') no-repeat top center;
+	background-size: cover;
+}
+
+header nav ul{
+	text-align: center;
+	line-height: 50px;
+	background-color: #333;
+	position: fixed;
+	width: 100%;
+	list-style: none;
+	z-index: 12;
+}
+header nav ul li{
+	display: inline-block;
+	padding: 0px 15px;
+}
+header nav ul li a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-weight: bold;
+	font-size: 13px;
+	letter-spacing: 2px;
+}
+header nav ul li.active a{
+	color: #F44D02;
+}
+
+header div.introduction{
+	height: 700px;	
+	padding-top: 200px;
+
+}
+header div.introduction div.introduction-content{
+	width: 950px;
+	margin: auto;
+	text-align: center;
+}
+header div.introduction div.introduction-content div.introduction-caption h1{
+	color: white;
+	font-size: 95px;
+
+}
+
+header div.introduction div.introduction-content div.introduction-caption p{
+	color: #9E9B95;
+	padding: 30px 120px;
+	margin: auto;
+	font-size: 23px;
+	line-height: 30px;
+
+}
+span.white-word{
+	color: white;
+}
+header div.introduction div.introduction-content div.line{
+	width: 600px;
+	border-bottom: 1px solid rgba(150, 150, 150, .1);
+	margin: auto;
+}
+header div.introduction div.introduction-content div.introduction-social {
+	margin-top: 25px;
+}
+header div.introduction div.introduction-content div.introduction-social ul li{
+	display: inline-block;
+	list-style: none;
+	padding: 0px 18px;
+
+}
+header div.introduction div.introduction-content div.introduction-social ul li a{
+	font-size: 28px;
+	color: white;
+}
+
+
+header div.introduction div.introduction-content div.introduction-social ul li:hover a{
+	color: #11abb0;
+}
+header div.introduction div.introduction-content div.go-to-main {
+	margin-top: 150px;
+}
+header div.introduction div.introduction-content div.go-to-main a{
+	font-size: 42px;
+	color: white;
+	transition: 1s ease;
+	
+}
+header div.introduction div.introduction-content div.go-to-main a:hover{
+	color: #11abb0;
+
+}
+/*End css header*/
+
+/*Start css main*/
+main{
+	height: 3150px;
+}
+main section.about-me{
+	height: 475px;
+	background-color: #2D2D2D;
+}
+main section.about-me div.about-me-content{
+	width: 940px;
+	margin: auto;
+	padding: 95px 0px;
+
+}
+main section.about-me div.about-me-content img{
+	border-radius: 50%;
+}
+main section.about-me div.about-me-content div.about-me-information{
+	float: right;
+	width: 680px;
+}
+main section.about-me div.about-me-content div.about-me-information h2{
+	color: white;
+	margin-bottom: 20px;
+}
+main section.about-me div.about-me-content div.about-me-information p{
+	color: #9E9B95;
+	font-size: 17px;
+	margin-bottom: 35px;
+	line-height: 25px;
+}
+span.bold-word{
+	font-weight: bold;
+}
+span.italic-word{
+	font-style: italic;
+}
+a.white-word-link{
+	text-decoration: none;
+	color: white;
+}
+a.white-word-link:hover{
+	color: #11abb0;
+}
+
+main section.experience{
+	height: 1865px;
+	background-color: white;
+}
+main section.experience div.experience-content{
+	width: 1022px;
+	margin: auto;
+	padding: 20px 0px;
+}
+
+main section.experience div.experience-content section.experience-list{
+	padding: 40px 40px;
+	border-bottom: 1px solid #e8e8e8;
+
+}
+main section.experience div.experience-content section.education{
+	height: 200px;
+}
+main section.experience div.experience-content section.experience-list div.experience-list-left{
+	width: 250px;	
+	float: left;
+}
+main section.experience div.experience-content section.experience-list h2{
+	color: #303232;
+	text-transform: uppercase;
+	font-size: 20px;
+	border-bottom: 3px solid #0EADAB;
+	display: inline-block;
+	padding-bottom: 3px;
+
+}
+
+main section.experience div.experience-content section.experience-list div.experience-list-right{
+	float: left;
+	width: 630px;
+}
+main section.experience div.experience-content section.experience-list div.experience-list-right h3{
+	margin-bottom: 16px;
+	color: #303232;
+	font-size: 28px;
+}
+main section.experience div.experience-content section.experience-list div.experience-list-right p{
+	margin-bottom: 30px;
+	color: #6e7881;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+main section.experience div.experience-content section.work{
+	height: 764px;
+}
+span.italic-word-big{
+	font-size: 20px;
+	font-style: italic;
+
+}
+main section.experience div.experience-content section.skill{
+	height: 640px;
+	border: none;
+}
+main section.experience div.experience-content section.skill div.experience-list-left{
+	float: none;
+	margin-bottom: 10px;
+}
+/* main section.experience div.experience-content section.skill div.skill-list{
+	width: 370px;
+	height: 75px;
+} */
+main section.experience div.experience-content section.skill div.skill-list div.skill-list-item{
+	width: 370px;
+	height: 75px;
+	float: left;
+	margin-right: 100px;
+	margin-bottom: 30px;
+}
+main section.experience div.experience-content section.skill div.skill-list div.skill-list-item h3{
+	margin-bottom: 15px;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+main section.experience div.experience-content section.skill div.skill-list div.bar{
+	height: 42px;
+	background: #ccc;
+	border-radius: 4px;
+	position: relative;
+}
+main section.experience div.experience-content section.skill div.skill-list div.bar div.bar-percent{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	background-color: #313131;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	height: 42px;
+	
+}
+main section.experience div.experience-content section.skill div.skill-list div.php div.bar div.bar-percent{
+	width: 295px;
+	animation: loadPhp 2s ease forwards;
+}
+@keyframes loadPhp{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 295px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.python div.bar div.bar-percent{
+	width: 148px;
+	animation: loadPython 2s ease forwards;
+}
+@keyframes loadPython{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 148px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.angularjs div.bar div.bar-percent{
+	width: 205px;
+	animation: loadAngularjs 2s ease forwards;
+}
+@keyframes loadAngularjs{
+	from {
+		width: 0px;	
+	}
+	to{
+		width: 205px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.html div.bar div.bar-percent{
+	width: 222px;
+	animation: loadHtml 2s ease forwards;
+}
+@keyframes loadHtml{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 222px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.js div.bar div.bar-percent{
+	width: 240px;
+	animation: loadJs 2s ease forwards;
+}
+@keyframes loadJs{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 240px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.memcached div.bar div.bar-percent{
+	width: 222px;
+	animation: loadMemcached 2s ease forwards;
+}
+@keyframes loadMemcached{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 295px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.mongdb div.bar div.bar-percent{
+	width: 295px;
+	animation: mongdb 2s ease forwards;
+}
+@keyframes mongdb{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 295px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.gearman div.bar div.bar-percent{
+	width: 260px;
+	animation: gearman 2s ease forwards;
+}
+@keyframes gearman{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 260px;
+	}
+}
+main section.experience div.experience-content section.skill div.skill-list div.redis div.bar div.bar-percent{
+	width: 275px;
+	animation: redis 2s ease forwards;
+}
+@keyframes redis{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 275px;
+	}
+}
+main section.slogan{
+	background-color: #252525;
+	height: 336px;
+}
+main section.slogan div.slogan-content{
+	width: 990px;
+	margin: auto;
+	padding: 108px 0px;
+
+}
+
+main section.slogan div.slogan-content h2{
+	width: 70px;
+	height: 60px;
+	float: left;
+	color: white;
+	font-size: 70px;
+	margin-right: 100px;
+	padding-top: 10px;
+}
+main section.slogan div.slogan-content p{
+	color: white;
+	font-size: 27px;
+	width: 820px;
+	line-height: 50px;
+	font-style: italic;
+	float: left;
+}
+div.clear{
+	clear: both;
+}
+main section.slogan div.slogan-content div.author{
+	color: white;
+	text-align: right;
+}
+
+main section.my-work{
+	background-color: #ECEEEC;
+	height: 475px;
+}
+main section.my-work div.my-work-content{
+	width: 1070px;
+	margin: auto;
+	text-align: center;
+	padding: 95px 0px;
+
+}
+
+main section.my-work div.my-work-content h2{
+	color: #95a3a3;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-bottom: 52px;
+}
+main section.my-work div.my-work-content div.my-work-list section.my-work-list-item{
+	float: left;
+	width: 216px;
+	height: 216px;
+	margin-right: 42px;
+	background: white;
+	position: relative;
+	cursor: pointer;
+}
+main section.my-work div.my-work-content div.my-work-list section.my-work-list-item img{
+	width: 216px;
+	height: 216px;
+	z-index: 10;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+main section.my-work div.my-work-content div.my-work-list section.my-work-list-item div.my-work-link{
+	width: 216px;
+	height: 216px;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: white;
+	transition: 0.5s ease;
+	opacity: 0;
+	z-index: 11;
+}
+
+main section.my-work div.my-work-content div.my-work-list section.my-work-list-item div.my-work-link h3{
+	margin-top: 20px;
+	padding: 0px 20px;
+	font-size: 16px;
+	text-align: left;
+
+}
+main section.my-work div.my-work-content div.my-work-list section.my-work-list-item div.my-work-link i{
+	margin-top: 50px;
+}
+main section.my-work div.my-work-content div.my-work-list section.my-work-list-item:hover  div.my-work-link{
+	opacity: 1;
+	
+}
+/*End css main*/
+
+/*Start css footer*/
+footer{
+	height: 205px;
+	background-color: #110F0E;
+}
+footer div.footer-content{
+	width: 390px;
+	margin: auto;
+	padding: 65px 0px;
+	position: relative;
+}
+footer div.footer-content div.footer-social{
+	
+}
+footer div.footer-content div.footer-social ul li{
+	display: inline-block;
+	list-style: none;
+	padding: 0px 20px;
+}
+
+footer div.footer-content div.footer-social ul li a{
+	font-size: 28px;
+	color: #525252;
+}
+footer div.footer-content div.footer-social ul li:hover a{
+	color: white;
+}
+footer div.copyright{
+	padding: 0px 18px;
+	margin-top: 25px;
+}
+footer div.copyright p{
+	color: #303030;
+
+}
+footer div.copyright a.copyright-link{
+	text-decoration: none;
+	color: #525252;
+}
+footer div.copyright a.copyright-link:hover{
+	color: white;
+}
+footer div.back-to-top{
+	position: absolute;
+	top: -25px;
+	left: 135px;
+}
+footer div.footer-content div.back-to-top a{
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #525252;
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	transition: 0.5s ease;
+}
+footer div.footer-content div.back-to-top a i{
+	margin-top: 15px;
+}
+footer div.footer-content div.back-to-top a:hover{
+	background-color: #0f9095;
+}
+/*End css footer*/

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="js/jsb7.js"></script>
+</head>
+<body onerror="myError();" onload="myLoad();" onmousemove="myMove();" onresize="myResize();">
+	<h1>JS - Date</h1>
+	<h2>JS - Event</h2>
+	<button type="button" onclick="myClick('Van B');test();"> click me</button>
+	<br>
+	<button type="button" ondblclick="myDbClick();"> click me 2</button>
+	<br>
+	<input type="text" onfocus="myFocus();" onblur="myBlur();">
+	<br><br>
+	<input type="text" onkeydown="myKeyDown();" onkeypress="myKeyPress();" onkeyup="myKeyUp();">
+	<br><br>
+	<select name="" id="" onchange="myChange(this.value);">
+		<option value="0">Nam</option>
+		<option value="1">Nu</option>
+	</select>
+	<br>
+	<br>
+	<img src="image/icon_zing_mp3_60.png" alt="" width="100" height="100" onmousedown="myMouseDown(this);" onmouseup="myMouseUp(this);" onmouseover="myMouseOver(this);" onmouseout="myMouseOut(this);" onmousemove="myMouseMove(this);">
+
+	<textarea onselect="mySelect(this.value);">asfafadgadafafdasda</textarea>
+	<script type="text/javascript">
+		window.onbeforeunload = function(){
+			return 'Exit';
+		}
+		function mySelect(value){
+			alert('Ban vua chon ' +value);
+
+		}
+		function myResize(){
+			alert('Ban vua thay doi kich thuoc cua so');
+		}
+		function myMouseDown(obj){
+			obj.width=300;
+			obj.height =300;
+
+		}
+		function myMouseUp(obj){
+			obj.width=100;
+			obj.height =100;
+
+		}
+		function myMouseOver(obj){
+			obj.width=300;
+			obj.height =300;
+
+		}
+		function myMouseOut(obj){
+			obj.width=100;
+			obj.height =100;
+
+		}
+		function myMouseMove(obj){
+			obj.width=500;
+			obj.height =500;
+
+		}
+		function myMove(obj){
+			console.log('move');
+
+		}
+
+		function myClick(name){
+			alert('Hello '+name);
+		}
+		function test(){
+			console.log('test');
+		}
+		function myDbClick(){
+			console.log('Ban vua db click');
+		}
+		function myFocus(){
+			console.log('Ban vua nhap chuot vao toi');
+		}
+		function myBlur(){
+			console.log('Ban bo nhay chuot');
+		}
+		function myKeyDown(){
+			console.log('Ban vua nhan ban phim');
+		}
+		function myKeyPress(){
+			console.log('Ban dang giu phim');
+		}
+		function myKeyUp(){
+			console.log('Ban vua buong phim ra');
+		}
+		function myError(){
+			alert('Co loi xay ra');
+		}
+		function myChange(value){
+			if(value==0){
+				console.log('Ban vua chon Nam');
+			}else if(value==1){
+				console.log('Ban vua chon Nu');
+			}else {
+				console.log('Ban chua chon gi');
+			}
+
+		}
+		function myLoad(){
+			alert("tai trang thanh cong");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+div.box{
+	width: 200px;
+	height: 100px;
+	border: 1px solid red;
+	/*overflow:hidden;
+	/*overflow:scroll;*/
+	/*overflow-x: scroll;*/
+	/*overflow-x: hidden;
+	overflow-y:  scroll;*/
+	overflow: auto;
+}
+
+p{
+	width: 300px;
+}
+
+div.content-1,div.content-2,div.content-3{
+	width: 500px;
+	height: 350px;
+	float: left;
+}
+div.content-1{
+	border: 1px solid red;
+	/*background-color: pink;*/
+	background: -moz-linear-gradient(to top left, yellow,violet,green);
+	background: -webkit-linear-gradient(to top left, yellow,violet,green);
+	background: -o-linear-gradient(to top left, yellow,violet,green);
+	background: -ms-linear-gradient(to top left, yellow,violet,green);
+	background: linear-gradient(to top left, yellow,violet,green);
+}
+div.content-2{
+	border: 1px solid blue;
+	/*background-color: yellow;*/
+	background: -moz-linear-gradient( top , yellow,violet,green);
+	background: -webkit-linear-gradient( top , yellow,violet,green);
+	background: -o-linear-gradient( top , yellow,violet,green);
+	background: -ms-linear-gradient( top , yellow,violet,green);
+	background: linear-gradient( top , yellow,violet,green);
+	-webkit-transform:translate(50px,50px) ;
+	-moz-transform: translate(50px,50px);
+	-o-transform: translate(50px,50px);
+	-ms-transform:translate(50px,50px) ;
+	   transform: translate(50px,50px);
+
+	-webkit-transform:scale(2,2);
+	-moz-transform: scale(2,2);
+	-o-transform: scale(2,2);
+	-ms-transform:scale(2,2);
+	   transform: scale(2,2);
+
+    -webkit-transform:rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform:rotate(45deg) ;
+	  transform: rotate(45deg);
+
+	-webkit-transform:skew(30deg);
+	-moz-transform: skew(30deg);
+	-o-transform: skew(30deg);
+	-ms-transform:skew(30deg) ;
+	   transform: skew(30deg);
+	   transition: width 5s ease 0s, height 5s ease 0s;
+	   animation: myAnimation 5s ease 0s infinite alternate;
+	   position: relative;	   
+	    
+}
+div.content-2:hover{
+	height: 500px;
+	width: 700px;
+}
+@keyframes myAnimation{
+	from {left:0px;}
+	to{left:300px;}
+	from {
+		top: 0px;
+	}
+	to{
+		top: 500px;
+	}
+}
+div.clear{
+	clear: both;
+}
+div.content-3{
+	border: 1px solid blue;
+	/*background-color: yellow;*/
+	background: -moz-linear-gradient(60deg , yellow,violet,green);
+	background: -webkit-linear-gradient(60deg , yellow,violet,green);
+	background: -o-linear-gradient( 60deg, yellow,violet,green);
+	background: -ms-linear-gradient( 60deg, yellow,violet,green);
+	background: linear-gradient( 60deg,, yellow,violet,green);
+}
+
+div.content-4 p{
+	width: 100px;
+	/*border: 1px solid red;*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+div.content-4{
+	width: 200px;
+	height: 200px;
+	background-color: violet;
+	border: 1px solid blue;
+	transition: height 15s ease 0s;
+}
+
+div.content-4:hover{
+	height: 500px;
+}
+
+@media only screen and (min-width: 374px) and (max-width: 424px){
+	div.content-1{
+		background-color: red;
+	}
+	div.content-2{
+		background-color: green;
+		/*float: none;
+		width: 100%;*/
+	}
+	img{
+		display: none;
+	}
+}

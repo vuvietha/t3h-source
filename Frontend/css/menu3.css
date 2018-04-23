@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+div#wrapper{
+	width: 100%;
+	background-color: #000000;
+}
+
+div#wrapper nav{
+	width: 980px;
+	margin: auto;
+	min-height: 40px;
+}
+div#wrapper nav ul li div.content{
+	display: none;
+	background-color: #000000;
+	width: 500px;
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	animation: myAnimation 2s ease 0s; 
+}
+@keyframes myAnimation{
+	from {
+		width: 0px;
+	}
+	to{
+		width: 500px;
+	}
+	from {
+		height: : 0px;
+	}
+	to{
+		height: 300px;
+	}
+}
+ul{
+	text-align: center;
+}
+
+ul li{
+	list-style: none;
+	display: inline-block;
+	line-height: 40px;
+	padding:0px 20px;
+	position: relative;
+}
+
+ul li a{
+	text-decoration: none;
+	display: block;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+div#wrapper nav ul li:hover {
+	background-color: #333132;
+}
+div#wrapper nav>ul>li:hover>a {
+	color: yellow;
+}
+
+div#wrapper nav ul li:hover div.content{
+	display: block;
+	width: 500px;
+
+
+
+}
+
+div#wrapper nav ul li:hover div.content ul{
+	display: table-row;
+}
+div#wrapper nav ul li:hover div.content ul li{
+	display: table-cell;
+}
+
+div#wrapper nav ul li:hover div.content ul li a{
+	text-align: left;
+}
+div#wrapper nav ul li:hover div.content ul li:hover{
+	background-color: #333132;
+}

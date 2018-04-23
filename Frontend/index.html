@@ -1,0 +1,371 @@
+<!-- Khai bao chuan HTML5-->
+<!DOCTYPE html>
+
+<!--Trình duyệt nhận biết file html-->
+<html lang ="en">
+	<!--Khai báo thông tin quan trọng của website. 
+	Nội dung trong thẻ head không hiển thị lên trình duyệt-->
+	<head>
+		<!--Khai báo tiêu đề hiển thị trên tabar của trình duyệt-->
+		<title>mp3.zing.vn</title>
+
+		<!--SEO web-->
+		<meta name="author" content="Vu Ha">
+		<meta name="description" content="website nghe nhac truc tuyen">
+		<meta name ="keyword" content="mp3, mp4">
+
+		<!--Hỗ trợ font chữ ký tự đặc biệt-->
+		<meta charset="utf8">
+		<link rel="icon" href="image/icon_zing_mp3_60.png">
+
+		<!--Nhúng css ngoại tuyến vào website-->
+		<link rel="stylesheet" type="text/css" href="css/test.css">
+		
+		<!--Định nghĩa css nội tuyến-->
+		<style>
+			/* code css ở đây*/
+			
+		</style>
+		<!--Nhúng javascript ngoại tuyến vào webstie-->
+		<script src="js/test.js" type="text/javascript"></script>
+
+		<!-- sử dụng js nội tuyến-->
+		<script  type="text/javascript">
+			/* code js ở đây*/
+		</script>
+		<noscript>Báo cho người dùng biết trình duyệt của bạn có hỗ trợ javascript
+		</noscript>
+	</head>
+
+	<body>
+		<!-- Hien thi noi dung len trinh duyet-->
+
+		<!--cac the Html lam viec voi van ban tieu de va dinh dang van ban-->
+		<!--The van ban p la the block-->
+		<!-- Thuoc tinh id đinh danh mot ten goi cho the html va co gia tri duy nhat-->
+		<!-- Thuoc tinh id đinh danh mot ten goi cho the html va duoc su dung nhieu lan-->
+		<!-- Thuoc tinh name đinh danh mot ten goi cho the html hay duoc su dung cho form--> 
+		<p id="myP" class="myP myP1 myP2" name="test"> Điều tra vụ lừa đảo thẻ điện thoại, Công an Phú Thọ đã khám phá đường dây đánh bạc liên quan tới ông Nguyễn Thanh Hóa.</p>
+		<!--The tieu de-->
+		<!-- The block noi dung tu dong chiem mot vung khong gian duy nhat khong cho the khac nam canh-->
+		<h1>This is h1 tag</h1> 
+		<h2>This is h2 tag</h2>
+		<h3>This is h3 tag</h3>
+		<h4>This is h4 tag</h4>
+		<h5>This is h5 tag</h5>
+		<h6>This is h6 tag</h6>
+
+		<!-- The dinh dang van ban-->
+
+		<b>This is b tag</b>
+		<!-- b la the inline-->
+
+		<strong>This is strong tag</strong>
+		<!--strong la the inline tot cho viec seo web con the b thi khong-->
+		<br/>
+		<br>
+
+		<i><u>chu in nghieng</u></i>
+		<br>
+
+		<p>Giam gia : <del>100000<del></p>
+
+		<p>cau thu <mark>Messi</mark> da rat hay</p>
+
+		<p>doi bong<em> MU</em> da hay</p>
+
+		<!-- the em nhan manh cum tu tot cho viec seo web-->
+		<p>
+			Ax<sup>3</sup> + By <sup>2</sup> + Cz = d
+			<br>
+			H <sub>2</sub> + O <sub>2</sub> = 2H <sub>2</sub> O
+		</p>
+		<span>This is span</span>
+		<!-- the span la the inline de dang trong viec css-->
+		<small>This is small</small>
+		<big>This is big tag</big>
+		<br>
+		<!-- Het cac the Html lam viec voi van ban tieu de va dinh dang van ban -->
+
+		<!-- The html tao lien ket-->
+		<!-- sieu lien ket-->
+		<!-- Thuoc tinh title cua the a tot cho viec seo web-->
+		<a href="http://kenh14.vn/" title="vnexpress" target="_blank">Go to vnexpress</a>
+		<!--lien ket noi bo anchor link - neo link-->
+		<a href="#myP" title="go to p">Go to p tag</a>
+		<!--Het The html tao lien ket-->
+		
+		<!--The html tao danh sach-->
+		<!-- Danh sach khong co thu tu-->
+		<ul>
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#">About</a>
+			</li>
+			<li>
+				<a href="#">Contact</a>
+			</li>
+			<li>
+				<a href="#">Product</a>
+			</li>
+		</ul>
+
+		<ol>
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#">About</a>
+			</li>
+			<li>
+				<a href="#">Contact</a>
+			</li>
+			<li>
+				<a href="#">Product</a>
+			</li>
+		</ol>
+		<!--Het the html tao danh sach-->
+
+		<!--The tao bang bieu-->
+		<table border="1" width="100%">
+			<caption>Thong tin sinh vien</caption>
+			<thead>
+				<tr>
+					<th>Ma SV</th>
+					<th>Ho Ten</th>
+					<th>SDT</th>
+					<th>Que Quan</th>
+					<th>Email</th>
+					<th>Hoc Bong</th>
+					<th colspan="2">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>112</td>
+					<td>Vu Viet Ha</td>
+					<td>093124235</td>
+					<td rowspan="2">Nam Dinh</td>
+					<td>havv@gmail.com</td>
+					<td>200000</td>
+					<td>[Edit]</td>
+					<td>[Delete]</td>
+				</tr>
+				<td>113</td>
+				<td>Vu Viet B</td>
+				<td>093124235</td>
+				<td>havv@gmail.com</td>
+				<td>200000</td>
+				<td>[Edit]</td>
+				<td>[Delete]</td>
+			</tr>
+			<td>114</td>
+			<td>Vu Viet C</td>
+			<td>093124235</td>
+			<td>Thai Binh</td>
+			<td>havv@gmail.com</td>
+			<td>200000</td>
+			<td>[Edit]</td>
+			<td>[Delete]</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="5">Tong hoc bong: </td>
+			<td colspan="3">600000</td>
+		</tr>
+	</tfoot>
+</table>
+<br>
+
+<!--Lich thi dau bong da-->
+<table border="1" width="100%" cellspacing="0" cellpadding="10">
+	<caption></caption>
+	<thead>
+		<tr>
+			
+			<th rowspan="2">Tỷ lệ</th>
+			<th colspan="3" rowspan="2">Trực tiếp</th>
+			<th colspan="4">Thời gian</th>
+			<th rowspan="2">Trận đấu</th>
+			
+
+
+		</tr>
+		<tr>
+			
+			
+			
+			
+			<th>Trận đấu</th>
+			<th>Tỷ lệ</th>
+			<th>Trực tiếp</th>
+			<th>Thời gian</th>
+			
+			
+			
+
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="9">data</td>
+			
+		</tr>
+		<tr>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td rowspan="2">data</td>
+		</tr>
+		<tr>
+			
+			
+			
+			
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+		</tr>
+		<tr>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td rowspan="2">data</td>
+		</tr>
+		<tr>
+			
+			
+			
+			
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+		</tr>
+		
+		<tr>
+			
+			<td colspan="9">data</td>
+			
+		</tr>
+		<tr>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td rowspan="2">data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td rowspan="2">data</td>
+		</tr>
+		<tr>															
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+			<td>data</td>
+		</tr>
+		
+	</tbody>
+</table>
+<!--Het the tao bang bieu-->
+
+<!-- Cac the html multimedia-->
+
+<img src="image/1.jpg" alt="Cau thu ronaldo" width="200" height="200">
+
+<audio src="audio/horse.ogg" autobuffer autoloop loop controls></audio>
+
+
+<!-- autobuffer tu dong load truoc-->
+<video src="video/mov_bbb.mp4" autobuffer autoloop loop controls poster="image/1.jpg"></video>
+<embed src="image/2.swf" type=""></embed>
+<!--<iframe src="https://vnexpress.net/" width="100%" height="500"></iframe>-->
+<!--Het Cac the html multimedia-->
+
+<!--The do hoa-->
+<canvas id="canvas" width="500"  height="500" style="border: 1px solid red">
+	
+</canvas>
+
+<script type="text/javascript">
+			// truy xuat vao the canvas
+			let canvas = document.getElementById('canvas');
+
+			// thiet lap che do do hoa 2d
+			let ctx = canvas.getContext('2d');
+
+			//Xac dinh tao do cua diem bat dau
+			ctx.moveTo(30,30);
+
+			//Xac dinh toa do diem ket thuc
+			ctx.lineTo(100,100);
+
+			//Xac dinh do day cua duong thang
+			ctx.lineWidth = 3;
+
+			//Xac dinh mau sac
+			ctx.strokeStyle = 'blue';
+
+			//Ve duong thang
+			ctx.stroke();
+
+			//Ve duong thang tiep theo. Bat dau thuc thi che do do hoa tiep theo
+			ctx.beginPath();
+			ctx.moveTo(100,100);
+			ctx.lineTo(300,100);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(300,100);
+			ctx.lineTo(30,30);
+			ctx.stroke();
+
+			//Tao font chu
+			ctx.font = 'italic 20pt Calibri';
+			// can giua cho chu
+			ctx.textAlign = 'center';
+			//Doi mau cho chu
+			ctx.fillStyle = 'pink';
+
+			ctx.fillText('Vu Viet Ha',200,200);
+
+			//Ve hinh tu giac
+			ctx.beginPath();
+
+			ctx.rect(300,300,100,100);
+			ctx.fillStyle = 'green';
+			ctx.fill();
+			ctx.lineWidth = 3;
+			ctx.strokeStyle = 'red';
+			ctx.stroke();
+
+			//Ve duonng tron
+			ctx.beginPath();
+			ctx.arc(150,350,100,0,Math.PI*2,true);
+			ctx.fillStyle = 'yellow';
+			ctx.fill();		
+			ctx.strokeStyle = 'red';
+			ctx.stroke();
+
+		</script>
+
+		
+	</body>
+
+	
+	</html>
