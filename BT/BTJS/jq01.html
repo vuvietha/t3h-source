@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BAI TAP JQUERY 01</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div.container{
+			width: 350px;
+		
+			margin: auto;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			padding: 15px;
+		}
+		input[type]{
+			width: 100%;
+			height: 25px;
+			border:  1px solid #ccc;
+			border-radius: 3px;
+		}
+		button#login{
+			padding: 5px 12px;
+			background-color: violet;
+			border: 2px solid #ccc;
+			border-radius: 3px;
+			color: white;
+		}
+		#errUser,#errPass,#errPass2{
+			color: red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<label for="txtUser">Username: </label>
+			<input type="text" name="txtUser" id="txtUser">
+			<p id="errUser">(*) Vui long nhap username</p>
+			<br><br>
+			<label for="txtPass">Password: </label>
+			<input type="password" name="txtPass" id="txtPass" placeholder="Mat khau phai 8 ky tu tro len, it nhat 1 so 1 chu hoa 1 chu thuong">
+			<p id="errPass">(*) Vui long nhap password</p>
+			<p id="errPass2">(*) Password khong dung</p>
+			<br><br>
+			<button type="button" id="login">Login</button>
+		</form>
+		
+	</div>
+	<br>
+	<button id= "backPage" type="button">back page</button>
+	<script type="text/javascript">
+		$(function(){
+			$('#login').click(function(){
+				let user = $('#txtUser').val().trim();
+				let pass = $('#txtPass').val().trim();
+				let checkUser;
+				let checkPass;
+				let testPass;
+				$('#errPass2').css('display','none');
+				$('#errPass').css('display','none');
+				if(user===''){
+					checkUser = false;
+					$('#txtUser').css('border','1px solid red');
+					$('#errUser').css('display','block');
+				}else {
+					checkUser = true;
+					$('#txtUser').css('border','1px solid #ccc');
+					$('#errUser').css('display','none');
+				}
+				if(pass===''){
+					checkPass = false;
+					$('#txtPass').css('border','1px solid red');
+					$('#errPass').css('display','block');
+				}else {
+					checkPass = true;
+					$('#txtPass').css('border','1px solid #ccc');
+					$('#errPass').css('display','none');
+				}
+				if(checkPass){
+					let validatePass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/g
+					if(validatePass.test(pass)){
+						$('#txtPass').css('border','1px solid #ccc');
+						$('#errPass2').css('display','none');
+						console.log(pass);
+						console.log('ok');
+
+					}else {
+						$('#txtPass').css('border','1px solid red');
+						$('#errPass2').css('display','block');
+						console.log(pass);
+						console.log('fail');
+					}
+
+				}
+				if(checkUser&&checkPass&&testPass){
+					alter('Dang nhap thanh con');
+					window.location.href = 'home.html';		
+
+					
+				}
+
+			});
+			
+
+		});
+		 
+	</script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo CSS</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style type="text/css">
+        .table > tbody > tr > td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Shopping Manly</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Trang chu <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Gioi thieu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Lien he</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">gio hang(3)</a>
+                  </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ./ navbar -->
+        <!-- content -->
+        <div class="row" style="margin-top: 80px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3>Danh muc</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Thoi nam cong so</a></li>
+                            <li class="list-group-item">Thoi nu cong so</li>
+                            <li class="list-group-item">Thoi trang cho be</li>
+                            <li class="list-group-item">Thoi trang dao pho</li>
+                            <li class="list-group-item">Thoi trang thu dong</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row" style="min-width: 100%;">
+                            <table class="table table-striped table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="text-center">Anh</th>
+                                        <th>San pham</th>
+                                        <th>So luong</th>
+                                        <th>Don gia</th>
+                                        <th>Thanh Tien</th>
+                                        <th width="5%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <img class="img img-thumbnail" src="http://www.viettien.com.vn/admin/wp-content/uploads/2018/07/somi-17a.jpg" alt="" width="120" height="120">
+                                        </td>
+                                        <td>So mi Viettien</td>
+                                        <td>
+                                            <input type="number" name="qty[]" value="1">
+                                        </td>
+                                        <td>620,000 vnd</td>
+                                        <td>620,000 vnd</td>
+                                        <td>
+                                            <a href="#" title="xoa" class="btn btn-sm btn-danger">Xoa</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row" style="min-width: 100%;">
+                            <a href="#" class="btn btn-primary">Tiep tuc mua hang</a>
+                            <a href="#" class="btn btn-secondary ml-3">Thanh toan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- ./ content -->
+    </div>
+    <!-- footer -->
+    <footer class="bg-dark mt-3 py-5 text-center text-white">
+        <h4>This is footer</h4>
+    </footer>
+    <!-- ./footer -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+</body>
+</html>

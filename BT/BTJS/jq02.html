@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BT JQUEY 02 - GIAI PT BAC HAI</title>
+	<script src="../../Frontend/js/jquery-3.3.1.js"></script>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+	div.container{
+		width: 500px;
+		height: 350px;
+		margin: auto;
+		border: 1px solid green;
+		background: #e2dfdf;
+		padding: 10px;
+		margin-top: 20px;
+		box-shadow: 10px 10px 5px 2px #ccc;
+
+	}
+	div.container h2{
+		text-align: center;
+		margin-top: 25px;
+	}
+	p#error{
+		color: red;
+		font-weight: bold;
+		text-align: center;
+		display: none;
+	}
+	div.row{
+		width: 100%;
+		padding: 3px 10px;
+	}
+	input[label]{
+		width: 30%;
+	}
+	input[type]{
+		width: 70%;
+		height: 25px;
+		border: 2px solid #ccc;
+		border-radius: 5px;
+		margin: 10px 3px;
+	}
+	form button{
+		padding: 7px 5px;
+		color: white;
+		background-color: #4a4ae8;
+		border: 1px solid black;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	#giaiPT{
+		margin-left: 150px;
+	}
+	p#result {
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Giải phương trình bậc 2</h2>
+		<p id="error">Vui lòng nhập hệ số phương trình và dữ liệu phải là số</p>
+		<form>
+			<div class="row">
+				<label for="txtHSa">Nhập hệ số a</label>
+				<input type="text" name="txtHSa" id="txtHSa">
+			</div>
+			<div class="row">
+				<label for="txtHSb">Nhập hệ số b</label>
+				<input type="text" name="txtHSb" id="txtHSb">
+			</div>
+			<div class="row">
+				<label for="txtHSc">Nhập hệ số c</label>
+				<input type="text" name="txtHSc" id="txtHSc">
+			</div>
+			<div class="row">
+				<button type="button" id="giaiPT">Giải Phương Trình</button>
+				<button type="button" id="reset">Reset</button>
+			</div>
+			<div class="row">
+				<p id="result"></p>
+				<p id="nghiem"></p>
+			</div>
+			
+		</form>
+		
+	</div>
+	<script type="text/javascript">
+		function giaiPTB2(a,b,c){
+			let result = null;
+			let nghiem =null;
+			let x1 = null;
+			let x2 =null;
+			if(a==0){
+				if(b==0){
+					if(c==0){
+						result = 'Kết quả:';
+						nghiem = 'Phương trình vô số nghiệm';
+					}else {
+						result = 'Kết quả:';
+						nghiem = 'Phương trình vô nghiệm';
+					}
+				}else {
+					result='Kết quả: Phương trình có nghiệm duy nhất';
+					x1 = -c/b;
+					nghiem=`Nghiệm: X = ${x1}`;
+				}
+
+			}else{
+				let delta = b*b - 4*a*c;
+				if(delta<0){
+					result = 'Kết quả:';
+					nghiem = 'Phương trình vô nghiệm';
+					
+				}else if(delta==0){
+					result = 'Kết quả: Phương trình có nghiệm duy nhất';
+					x1 = x2 = -b/(2*a);
+					nghiem = `Nghiệm: X1=X2=${x1}`;
+				}else {
+					result = 'Kết quả: Phương trình có 2 nghiệm phân biệt';
+					x1 = (-b+Math.sqrt(delta))/(2*a);
+					x2 = (-b-Math.sqrt(delta))/(2*a);
+					nghiem = `Nghiệm: X1=${x1} Và X2=${x2}`;	
+				}
+			}
+			return ([result,nghiem]);
+
+		}
+		$(function(){
+			$('#giaiPT').click(function(){
+				let a = $('#txtHSa').val();
+				let b = $('#txtHSb').val();
+				let c = $('#txtHSc').val();
+				let checka,checkb,checkc;
+				$('#result').text('');
+				$('#nghiem').text('');
+				if(a===''||isNaN(a)){
+					checka=false;		
+					$('#txtHSa').css('border','2px solid red');
+				}else {
+					checka=true;
+					$('#txtHSa').css('border','2px solid #ccc');
+				}
+				if(b===''||isNaN(b)){
+					checkb=false;
+					;
+					$('#txtHSb').css('border','2px solid red');
+					console.log(b);
+				}else {
+					checkb=true;				
+					$('#txtHSb').css('border','2px solid #ccc');
+				}
+				if(c===''||isNaN(c)){
+					checkc=false;
+			
+					$('#txtHSc').css('border','2px solid red');
+				}else {
+					checkc=true;
+					
+					$('#txtHSc').css('border','2px solid #ccc');
+				}
+				if(checka&&checkb&&checkc){
+					$('#error').css('display','none');
+					let kq = giaiPTB2(a,b,c);
+					$('#result').text(kq[0]);
+					$('#nghiem').text( kq[1]);
+					console.log(kq[0]);
+					console.log(kq[1]);
+
+				}else {
+					$('#error').css('display','block');
+				}
+
+			});
+		});
+		
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BAI TAP JQUERY 03</title>
+	<script type="text/javascript" src="../../Frontend/js/jquery-3.3.1.js"></script>
+	<style type="text/css">
+		div.container{
+			width: 980px;
+			margin: auto;
+
+		}
+		div.time{
+			width: 100%;
+			height: 120px;
+		}
+		h2.title{
+			text-align: center;
+			color: pink;
+			font-weight: bold;
+		}
+		p#result{
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.clear{
+			clear: both;
+		}
+		div.content{
+			width: 50%;
+			float: left;
+		}
+		img{
+			width: 480px;
+		}
+		div.fullContent{
+			width: 100%;
+			min-height: 1000px;
+			display: none;
+		}
+		div.fullContent img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="time">
+			<h2 class="title">Tim su khac biet</h2>
+			<p id="result">0</p>
+			
+		</div>
+		<div class="clear"></div>
+		<div class="content">
+			<img src="../../Frontend/image/1.jpg" alt="">
+		</div>
+		<div class="content">
+			<img src="../../Frontend/image/1.jpg" alt="">
+		</div>
+	</div>
+	<div class="fullContent">
+		<img src="../../Frontend/image/1.jpg" alt="">
+	</div>
+	<script type="text/javascript">
+		
+		$(function(){
+			let t =0;
+			function count(){
+				++t;
+				$('#result').text(t);
+				if(t==6){
+					$('.container').css('display', 'none');
+					$('.fullContent').css('display','block');
+					clearInterval(countTime);
+				}
+			}
+			let countTime = setInterval(count,1000);
+
+		});
+	</script>
+	
+</body>
+</html>

@@ -133,3 +133,7 @@ let timGiaTriNhoNhatLonNhat = (arrNumber) =>{
 
 console.log(timGiaTriNhoNhatLonNhat(arrNumber));
 
+let mang = [];
+mang.push('orange');
+mang.push(1);
+console.log(mang);

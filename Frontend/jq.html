@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DEMO-JQUERY</title>
+	<link rel="stylesheet" href="">
+	<!--Nhung thu vien jquery- dat truoc cac file js khac-->
+	<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+	<!--Nhung jquery truc tuyen-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<style type="text/css">
+	.myTextColor{
+		color: red;
+		font-size: 50px;
+		font-weight: bold;
+	}
+	.myFont{
+		text-decoration: underline;
+	}
+	.myTest{
+		border: 1px solid blue;
+	}
+	.box{
+		width: 300px;
+		height: 300px;
+		border: 5px solid red;
+		padding: 10px;
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<button type="button">Click Me</button>
+	<button id="clickMe">Click Me 2</button>
+	<button id="clickMe2">Click Me 3</button>
+	<h2 id="php1803E" name="myNameClass">This is class PHP</h2>
+	<h2 id="php" name="myNameClass">This is class PHP</h2>
+	<img src="image/icon_zing_mp3_60.png" alt="">
+	<input type="text" name="txtUser">
+	<p class="myP myFont">This is p</p>
+	<div class="box">
+		<ul>
+			<li class="first">This is li 1</li>
+			<li class="list">This is li 2</li>
+			<li class="list">This is li 3</li>
+			<li>This is li 4</li>
+			<li>This is li 5</li>
+		</ul>
+		<input  type="checkbox" name="txtCheck">
+		
+		
+	</div>
+	<br>
+	<div class="box">
+		<div>
+			<h4>abfasf</h4>
+			<h4>abfasf</h4>
+			<p>Test Find</p>
+			<h4>abfasf</h4>
+			<h4>abfasfsdfsdf</h4>
+			<div>
+				<h3>kasdasf</h3>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		//ham khoi tao - cho dom html load xong moi thuc thi cac lenh trong function
+		$(function(){
+			let time = 0
+			function showDiv(){
+				console.log(time);
+				time++;
+				if(time%5==0){
+					$('.box').show(4000);
+					//clearInterval(countTime);
+				}else {
+					$('.box').hide(4000);
+				}
+
+			}
+			let countTime = setInterval(showDiv,1000);
+			//tat ca ma lenh viet bang jquery deu nam trong nay
+			$('button[type="button"]').click(function(){
+				//alert('Hello you');
+				//let id = $('#php1803E').attr('id');
+				let id = $('h2').attr('id');
+				let name = $('h2').attr('name');
+				console.log(id);
+				console.log(name);
+				//prop ho tro phien ban jquery tu 6 tro len
+				let src = $('img').prop('src');
+				console.log(src);
+				// $('input[type="text"]').attr('type','button');
+				$('img').attr('src','image/1.jpg');
+				$('img').removeAttr('src');
+				if($('p').hasClass('myP')){
+					//console.log('true');
+					$('p').addClass('myTextColor');
+					$('p').removeClass('myFont');
+					$('p').toggleClass('myTest');
+
+				}
+				//val ko co tham so la lay ra gia tri trong selector
+				let user = $('input[type="text"]').val().trim();
+				console.log(user);
+				let textClass = $('#php1803E').text();
+				console.log(textClass);
+				//val co tham so la gan gia tri cho selector
+				$('input[type="text"]').val(textClass);
+				$('#php1803E').text('JQUERY');
+
+			});
+			$('#clickMe').click(function(){
+				console.log('click me 2');
+
+				//single css trong jquery
+				$('#php1803E').css('color','blue');
+				$('#php1803E').css('textDecoration','underline');
+
+				//multiple css - truyen vao ham css mot object
+				$('#php1803E').css({
+					backgroundColor : 'green',
+					marginTop : '50px'
+				});
+				let w = $('div.box').width();
+				let h = $('div.box').height();
+				console.log(`w:${w} & h:${h}`);
+				// $('div.box').width(600);
+				// $('div.box').height(600);
+				console.log($('div.box').innerHeight());
+				console.log($('div.box').innerWidth());
+				$('ul li').eq(3).css('color','blue');
+				$('ul li').filter('.list').css('color','yellow');
+				$('ul li').not('.first').css('color','violet');
+				$('div.box').find('div>p').css('color','pink');
+				$('div.box').find('div>p').next().next().css('color','blue');
+				$('div.box').find('div>p').prev().prev().css('color','yellow');
+				$('div.box').find('h3').parent().parent().css({
+					width:'200px',
+					height:'400px',
+					border:'1px solid red'
+				});
+				// $('div.box').fadeOut('slow');
+				// $('div.box').hide('slow');
+				// $('div.box').slideUp(5000);
+				//$('div.box').toggle(5000);
+				// $('div.box').slideToggle(5000);
+				$('div.box').fadeToggle(5000);
+
+			});
+
+			$('input[type="checkbox"]').click(function(){
+				//this dai dien cho phan tu dang tac dong ('input[type="checkbox"]')
+				if($(this).is(':checked')){
+					console.log('ok');
+					$('ul li:last-child').css('color','green');
+
+				}else {
+					$('ul li:last-child').css('color','black');
+				}
+			});
+			$('#clickMe2').click(function(){
+				// $('div.box').fadeIn('slow'); //ham dua vao dieu chinh thuoc tinh opacity 
+				// $('div.box').show('slow');  //width heiht
+				$('div.box').slideDown(5000); // height
+				let user = $('input[type="text"]').val().trim();
+				if(user===''){
+					$('input[type="text"]').css('border','1px solid red');
+					alert('ban chua nhap du lieu')
+				
+				}else {
+					$('input[type="text"]').css('border','1px solid #ccc');
+					alert(`Hello ${user}`);
+
+				}
+
+			});
+
+
+		});
+	</script>
+</body>
+</html>
