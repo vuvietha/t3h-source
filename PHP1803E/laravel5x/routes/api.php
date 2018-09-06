@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('photo','API\PhotoController');
+Route::resource('photo/delete','API\PhotoController');
+Route::resource('photo/update','API\PhotoController');
+Route::resource('user','API\UserController');
+Route::resource('user/delete','API\UserController');
+Route::resource('user/update','API\UserController');

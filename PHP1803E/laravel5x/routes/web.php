@@ -14,12 +14,37 @@
 // Route::get('/', function () {
 // 	return view('welcome');
 // })->name('welcome');
-Route::get('/','ProductController@index')->name('product.index');
-Route::get('add-cart/{id}','CartController@add')->name('addcart');
-Route::get('cart','CartController@showcart')->name('show.cart');
-Route::get('delete-cart/{id}','CartController@delete')->name('cart.delete');
-Route::get('destroy-cart','CartController@remove')->name('cart.removeall');
-Route::post('update-cart','CartController@update')->name('cart.update');
+Route::group([
+	'prefix' => LaravelLocalization::setLocale(),
+	'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+
+],function(){
+	// $language = Session::get('locale');
+	// $language = ($language == '' || $language == null) ? 'vi' : $language;
+	// App::setLocale($language);
+	// LaravelLocalization::setLocale($language);
+	Route::get('/','ProductController@index')->name('product.index');
+	Route::get('add-cart/{id}','CartController@add')->name('addcart');
+	Route::get('cart','CartController@showcart')->name('show.cart');
+	Route::get('delete-cart/{id}','CartController@delete')->name('cart.delete');
+	Route::get('destroy-cart','CartController@remove')->name('cart.removeall');
+	Route::post('update-cart','CartController@update')->name('cart.update');
+
+});
+
+Route::get('switch-language/{lang}', function($lang = null){
+	//dd($lang);
+	//set ngon ngu cho toan bo ung dung
+	App::setLocale($lang);
+	//Luu ngon ngu vao sesion de cho cac phien lam viec khac nhau
+	Session::put('locale',$lang);
+	//dung thu vien LaravelLocalization set lai ngon ngu 1 lan nua de no cí the tu hieu va chuyen doi ngon ngu dua vao tham so tren url truyen vao
+	LaravelLocalization::setLocale($lang);
+	//Dieu huong ve trang ma nguoi dung dang dung trc khi ho bam vao nut chuyen doi ngon ngu
+	$url = LaravelLocalization::getLocalizedURL(App::getLocale(),\URL::previous());
+	return redirect($url);
+
+})->name('language');
 
 Route::get('hello',function(){
 	return "Hello World";
@@ -137,7 +162,8 @@ Route::get('helloworld','TestController@show')->name('helloworld');
 Route::group([
 	'namespace' => 'Backend', //Group namespace Backend
 	'as' => 'admin.',
-	'prefix' => 'admin'
+	'prefix' => LaravelLocalization::setLocale().'/admin',
+	'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function(){
 	Route::get('login','LoginController@login')->name('showForm');
 	Route::get('logout','LoginController@logout')->name('logout');
@@ -147,8 +173,9 @@ Route::group([
 Route::group([
 	'namespace' => 'Backend', //Group namespace Backend
 	'as' => 'admin.',
-	'prefix' => 'admin',
-	'middleware' => ['web','adminLogin']
+	'prefix' => LaravelLocalization::setLocale().'/admin',
+	//'middleware' => ['web','adminLogin']
+	'middleware' => ['web','adminLogin','localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function(){
 	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 	Route::get('demo/{id}', 'DashboardController@demo')->name('demo');	
@@ -169,3 +196,18 @@ Route::get('login', function(){
 
 })->name('login');
 
+//Dinh nghia cac route lam viec voi API
+Route::group([
+	'namespace' => 'API',
+	'prefix' => 'api'
+],function(){
+	Route::resource('football','FootballController')->only(
+		['index','show']
+	);
+	Route::resource('create-product','FootballController')->only('store');
+	Route::resource('delete-product','FootballController')->only('destroy');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

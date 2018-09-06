@@ -29,16 +29,25 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav ml-auto">
                       <li class="nav-item active">
-                        <a class="nav-link" href="#">Trang chu <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">@lang('commonlang.home') <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gioi thieu</a>
+                        <a class="nav-link" href="#">@lang('commonlang.about')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Lien he</a>
+                        <a class="nav-link" href="#">@lang('commonlang.contact')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ count(Cart::content())  }} SP</a>
+                        <a class="nav-link" href="#">Gio hang{{ count(Cart::content())  }} SP</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link"> |</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('language',['lang' => 'en']) }}">English</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('language',['lang' => 'vi']) }}">Vietnamese</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +59,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <h3>Danh muc</h3>
+                    <h3>@lang('commonlang.categories')</h3>
                     <ul class="list-group">
                         <li class="list-group-item"><a href="#">Thoi nam cong so</a></li>
                         <li class="list-group-item">Thoi nu cong so</li>

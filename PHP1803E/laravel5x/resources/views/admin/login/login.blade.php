@@ -22,14 +22,16 @@
 				<form action="{{ route('admin.handleLogin') }}" method="POST">
 					  @csrf
 					<div class="form-group">
-						<label for="txtEmail">Email address</label>
+						<label for="txtEmail">@lang('loginlang.email')</label>
 						<input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Enter email">	
 					</div>
 					<div class="form-group">
-						<label for="txtPass">Password</label>
+						<label for="txtPass">@lang('loginlang.password')</label>
 						<input type="password" class="form-control" id="txtPass" name="txtPass" placeholder="Password">
 					</div>					
-					<button type="submit" class="btn btn-primary">Login</button>
+					<button type="submit" class="btn btn-primary">@lang('loginlang.login')</button>
+					<a class="nav-link" href="{{ route('language',['lang' => 'en']) }}">English</a>
+					<a class="nav-link" href="{{ route('language',['lang' => 'vi']) }}">Vietnamese</a>
 				</form>
 			</div>
 			

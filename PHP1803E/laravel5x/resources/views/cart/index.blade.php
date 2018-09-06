@@ -6,12 +6,12 @@
             <thead class="table-dark">
                 <tr>
                     <th>#</th>
-                    <th class="text-center">Anh</th>
-                    <th>San pham</th>
-                    <th>So luong</th>
-                    <th>Don gia</th>
-                    <th>Thanh Tien</th>
-                    <th width="5%">Action</th>
+                    <th class="text-center">@lang('cartlang.image')</th>
+                    <th>@lang('cartlang.product')</th>
+                    <th>@lang('cartlang.quantity')</th>
+                    <th>@lang('cartlang.price')</th>
+                    <th>@lang('cartlang.totalmoney')</th>
+                    <th width="5%">@lang('cartlang.action')</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,7 +28,7 @@
                     <td>{{ $carts->price }}</td>
                     <td>{{ number_format($carts->qty * $carts->price)  }}</td>
                     <td>
-                        <a href="{{ route('cart.delete',['id' => $key]) }}" title="xoa" class="btn btn-sm btn-danger">Xoa</a>
+                        <a href="{{ route('cart.delete',['id' => $key]) }}" title="xoa" class="btn btn-sm btn-danger">@lang('cartlang.delete')</a>
                     </td>
                 </tr>
                 @endforeach
@@ -43,9 +43,9 @@
         
     </div>
     <div class="col-lg-12">
-        <a href="{{ route('product.index') }}" title="" class="btn btn-primary btn-sm">Tiep tuc mua hang</a>
-        <a href="" title="" class="btn btn-success btn-sm ml-3">Thanh toan</a>
-        <a href="{{ route('cart.removeall') }}" title="xoa" class="btn btn-danger btn-sm ml-3">Xoa gio hang</a>
+        <a href="{{ route('product.index') }}" title="" class="btn btn-primary btn-sm">@lang('cartlang.continue')</a>
+        <a href="" title="" class="btn btn-success btn-sm ml-3">@lang('cartlang.pay')</a>
+        <a href="{{ route('cart.removeall') }}" title="xoa" class="btn btn-danger btn-sm ml-3">@lang('cartlang.deletecart')</a>
     </div> 
     <script type="text/javascript" >
         function updateCart(rowCart,obj){
